@@ -1,15 +1,12 @@
-// Variáveis
+// _variables.scss
 $background-color: #f5f5f5;
-$font-color: #333;
-$form-background: #fff;
+$font-family: 'Roboto', sans-serif;
+$text-color: #333;
+$primary-color: #630;
+$accent-color: #ffb6c1;
 $border-color: #ccc;
-$highlight-color: #ffb6c1;
-$button-background: #630;
-$button-hover-background: $highlight-color;
-$font-family-base: 'Roboto', sans-serif;
-$font-family-button: 'Montserrat', sans-serif;
 
-// Estilos Globais
+// _base.scss
 * {
     margin: 0;
     padding: 0;
@@ -18,8 +15,8 @@ $font-family-button: 'Montserrat', sans-serif;
 
 body {
     background-color: $background-color;
-    font-family: $font-family-base;
-    color: $font-color;
+    font-family: $font-family;
+    color: $text-color;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,17 +27,16 @@ form {
     width: 70%;
     max-width: 600px;
     padding: 20px;
-    background-color: $form-background;
+    background-color: #fff;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-left: 10%;
 }
 
-// Estilos para Grupos e Campos
 .campo, .sabor, .kilos, .Formatos, .observacoes {
-    font-family: $font-family-base;
+    font-family: $font-family;
     font-size: 1.1em;
-    color: #630;
+    color: $primary-color;
     margin-top: 10px;
 }
 
@@ -74,14 +70,14 @@ input, select, textarea {
 
 input:focus, select:focus, textarea:focus {
     outline: none;
-    border-color: $highlight-color;
-    box-shadow: 0 0 5px $highlight-color;
+    border-color: $accent-color;
+    box-shadow: 0 0 5px $accent-color;
 }
 
 button {
-    font-family: $font-family-button;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1em;
-    background-color: $button-background;
+    background-color: $primary-color;
     color: #fff;
     padding: .5em 1em;
     border: none;
@@ -90,7 +86,7 @@ button {
     transition: background-color .3s ease;
 
     &:hover {
-        background-color: $button-hover-background;
+        background-color: $accent-color;
     }
 }
 
@@ -106,7 +102,6 @@ button {
     height: auto;
 }
 
-// Mídia Queries
 @media screen and (max-width: 768px) {
     #titulo {
         margin-left: 10%;
